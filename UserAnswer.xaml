@@ -1,0 +1,40 @@
+﻿<Window x:Class="Calculator.UserAnswer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="UserAnswer" Height="117.32" Width="320.632" Background="#FF043104" Foreground="{x:Null}" WindowStyle="None" MouseLeftButtonDown="Window_MouseButtonDown" AllowsTransparency="False" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Вы действительно хотите закрыть программу?" HorizontalAlignment="Left" Margin="27,19,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF12FF14"/>
+        <Button Click="Yes_Click" 
+            Margin="59,69,201.8,19.6" 
+            BorderBrush="#FF12FF14" 
+            Foreground="#FF12FF14" 
+            Content="Да" 
+            FontFamily="Lucida Sans" 
+            FontSize="10" 
+            Background="#FF043104">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Click="No_Click" 
+            Margin="202,69,58.8,19.6" 
+            BorderBrush="#FF12FF14" 
+            Foreground="#FF12FF14" 
+            Content="Нет" 
+            FontFamily="Lucida Sans" 
+            FontSize="10" 
+            Background="#FF043104">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>

@@ -1,0 +1,282 @@
+﻿<Page x:Class="Calculator.Scientific"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Calculator"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Scientific" Height="481.2" Width="560.2" Background="#FF032306">
+    <Grid Margin="0,0,0,-0.4">
+        <Grid x:Name="Output" Margin="24,61,212,362.6">
+            <TextBox x:Name="TextOutput" HorizontalAlignment="Left" Height="59" Margin="0,0,0,-1.4" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" Background="Black" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="#FF0DB40E" TextAlignment="Right" FontSize="30" FontFamily="Digital-7 Mono"/>
+            <Rectangle HorizontalAlignment="Left" Height="59" Margin="0,0,0,-1.4" VerticalAlignment="Top" Width="324" Fill="#FF0DB40E" Opacity="0.3" Stroke="#FF00FF02"/>
+        </Grid>
+        <Grid x:Name="Button" Margin="26,161,212,70.6">
+            <Button x:Name="btn_pi" Content="π" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_pi_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_ln1" Content="Ln" HorizontalAlignment="Left" Margin="65,0,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="Button_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_log1" Content="Lg" HorizontalAlignment="Left" Margin="130,0,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_log1_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_clear" Content="C" HorizontalAlignment="Left" Margin="195,0,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_clear_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_arg" Content="atG" HorizontalAlignment="Left" Margin="0,36,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_arg_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_1_x" Content="1/x" HorizontalAlignment="Left" Margin="65,36,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_1_x_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_x2" Content="x^2" HorizontalAlignment="Left" Margin="130,36,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_x2_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_xy" Content="x^Y" HorizontalAlignment="Left" Margin="195,36,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_xy_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_acos" Content="acos" HorizontalAlignment="Left" Margin="0,72,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_acos_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_left" Content="(" HorizontalAlignment="Left" Margin="130,72,0,0" VerticalAlignment="Top" Width="28" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_left_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_right" Content=")" HorizontalAlignment="Left" Margin="162,72,0,0" VerticalAlignment="Top" Width="28" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_right_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_n_" Content="N!" HorizontalAlignment="Left" Margin="195,72,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_n__Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_asin" Content="asin" HorizontalAlignment="Left" Margin="0,108,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_asin_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_7" Content="7" HorizontalAlignment="Left" Margin="65,108,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_7_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_8" Content="8" HorizontalAlignment="Left" Margin="130,108,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_8_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_9" Content="9" HorizontalAlignment="Left" Margin="195,108,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_9_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_tg" Content="tg" HorizontalAlignment="Left" Margin="0,144,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_tg_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_4" Content="4" HorizontalAlignment="Left" Margin="65,144,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_4_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_5" Content="5" HorizontalAlignment="Left" Margin="130,144,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_5_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_cos" Content="cos" HorizontalAlignment="Left" Margin="0,180,0,-0.4" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_cos_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_1" Content="1" HorizontalAlignment="Left" Margin="65,180,0,-0.4" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_1_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_2" Content="2" HorizontalAlignment="Left" Margin="130,180,0,-0.4" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_2_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_3" Content="3" HorizontalAlignment="Left" Margin="195,180,0,-0.4" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="#FF032306" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_3_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_6" Content="6" HorizontalAlignment="Left" Margin="195,144,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_6_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_DEL" Content="DEL" HorizontalAlignment="Left" Margin="260,0,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_DEL_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_sqrt" Content="SQRT" HorizontalAlignment="Left" Margin="260,36,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_sqrt_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_multiply" Content="×" HorizontalAlignment="Left" Margin="260,72,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_multiply_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_divide" Content="÷" HorizontalAlignment="Left" Margin="260,108,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_divide_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_minus" Content="-" HorizontalAlignment="Left" Margin="260,144,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_minus_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_plus" Content="+" HorizontalAlignment="Left" Margin="260,180,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_plus_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_sin" Content="sin" HorizontalAlignment="Left" Margin="0,216,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_sin_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_percent" Content="%" HorizontalAlignment="Left" Margin="65,216,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_percent_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_0" Content="0" HorizontalAlignment="Left" Margin="130,216,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_0_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_dot" Content="." HorizontalAlignment="Left" Margin="195,216,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="#FF032306" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_dot_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_equal" Content="=" HorizontalAlignment="Left" Margin="260,216,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF032306" BorderBrush="{x:Null}" Background="#FF23A023" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_equal_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_E" Content="E" HorizontalAlignment="Left" Margin="65,72,0,0" VerticalAlignment="Top" Width="60" Foreground="#FF23A023" BorderBrush="#FF23A023" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="31" FontSize="20" Click="btn_sqrt_Copy_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+        <Grid x:Name="History" Margin="365,61,45,70.6">
+            <Border BorderBrush="#FF0DB40E" BorderThickness="1" HorizontalAlignment="Left" Height="350" Margin="0,0,0,-0.4" VerticalAlignment="Top" Width="1"/>
+            <TextBlock x:Name="TextHistory" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="324" Width="140" FontFamily="Digital-7 Mono" Foreground="#FF0DB40E" FontSize="15" Margin="6,-5,0,0"/>
+            <Button ToolTip="Очистить историю" Content="🗑" HorizontalAlignment="Left" Margin="111,324,0,-0.4" VerticalAlignment="Top" Width="29" Foreground="#FF23A023" BorderBrush="{x:Null}" Background="{x:Null}" FontFamily="Digital-7 Mono" Height="26" FontSize="15" Click="Button_Click_1">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+        <Label Content="SCIENTIFIC" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF125114" FontFamily="Digital-7 Mono" FontSize="15"/>
+    </Grid>
+</Page>
